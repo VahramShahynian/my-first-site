@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Мой первый сайт</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 
 <body>
@@ -16,18 +18,18 @@
         <a href="#contact">Контакты</a>
     </nav>
 
-    <section id="home">
+    <section id="home" data-aos="fade-up">
         <h1>Привет 👋</h1>
         <p>Я учусь быть full stack разработчиком. Добро пожаловать на мой сайт!</p>
-        <img src="img/cat.jpg.jpg" alt="мой аватар">
+        <img src="img/cat.jpg" alt="мой аватар">
     </section>
 
-    <section id="about">
+    <section id="about" data-aos="fade-right">
         <h2>Обо мне</h2>
         <p>Меня зовут Ваграм. Я начинающий веб-разработчик и хочу попасть в IT сферу.</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-aos="zoom-in">
         <h2>Проекты</h2>
         <ul>
             <li>Калькулятор на JavaScript</li>
@@ -36,7 +38,7 @@
         </ul>
     </section>
 
-    <section id="calculator">
+    <section id="calculator" data-aos="flip-left">
         <h2>Калькулятор</h2>
         <input type="number" id="num1" placeholder="Число 1">
         <input type="number" id="num2" placeholder="Число 2">
@@ -44,7 +46,7 @@
         <p id="result"></p>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <h2>Связаться со мной</h2>
         <form id="contactForm">
             <input type="text" id="name" placeholder="Ваше имя" required>
@@ -77,6 +79,14 @@
                 formMessage.innerText = "Пожалуйста, заполните все поля.";
                 formMessage.style.color = "red";
             }
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
         });
     </script>
 </body>
