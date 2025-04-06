@@ -32,6 +32,17 @@
     </section>
 
     <section id="contact">
+        <section id="contact">
+            <h2>Связаться со мной</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Ваше имя" required><br>
+                <input type="email" id="email" placeholder="Email" required><br>
+                <textarea id="message" placeholder="Ваше сообщение" rows="4" required></textarea><br>
+                <button type="submit">Отправить</button>
+                <p id="formMessage"></p>
+            </form>
+        </section>
+
         <section id="calculator">
             <h2>Калькулятор</h2>
             <input type="number" id="num1" placeholder="Число 1">
@@ -51,5 +62,22 @@
 
             document.getElementById("result").innerText = "Результат: " + result;
         }
+    </script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // отменяем перезагрузку страницы
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const formMessage = document.getElementById("formMessage");
+
+            if (name && email && message) {
+                formMessage.innerText = "Спасибо за сообщение!";
+                formMessage.style.color = "green";
+            } else {
+                formMessage.innerText = "Пожалуйста, заполните все поля.";
+                formMessage.style.color = "red";
+            }
+        });
     </script>
 </body>

@@ -84,3 +84,20 @@ input {
 html {
     scroll-behavior: smooth;
 }
+
+form input,
+form textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    display: block;
+}
+
+#formMessage {
+    font-weight: bold;
+    margin-top: 10px;
+}
